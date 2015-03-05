@@ -1,6 +1,6 @@
 #!/bin/bash
 echo $#
-while getopts "h?vf:" opt; do
+while getopts "h?vf:a:" opt; do
     case "$opt" in
     h|\?)
         echo "show help"
@@ -12,5 +12,8 @@ while getopts "h?vf:" opt; do
     f)  output_file=$OPTARG
 		echo "set output "$output_file
         ;;
-    esac
+    a)  archive_file=$OPTARG
+		echo "set output "$archive_file
+        ;;
+    esac 
 done
