@@ -9,7 +9,7 @@ dbname="dbname"
 prefix="modx_"
 
 site="domain.ru"
-pathFrom="relatine/or/absolute_path"$site
+pathFrom="relative/or/absolute_path"$site
 pathTo="/var/www/absolute_path/data/Dropbox/backups/"$site
 
 # Парсинг параметров
