@@ -8,8 +8,8 @@ dbpass="dbpass"
 dbhost="dbhost"
 dbname="dbname"
 
-sitepath="/home/1c/domfarfora.ru/"
-temppath="/home/1c/tmp/df_temp.sql"
+sitepath="/home/user/sitename.com/"
+temppath="/home/user/tmp/db_temp.sql"
 
 # Proccess
 echo "sync files"
