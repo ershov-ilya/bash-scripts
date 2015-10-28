@@ -1,0 +1,8 @@
+*/core/cache
+*/.git/
+logs/
+bare/
+distr/
+*/.htaccess
+*/config.inc.php
+www/assets/templates/front/

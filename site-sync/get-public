@@ -1,0 +1,27 @@
+# Config
+user="sshuser"
+pass="sshpass"
+host="sshhost"
+
+dbuser="dbuser"
+dbpass="dbpass"
+dbhost="dbhost"
+dbname="dbname"
+
+sitepath="/home/1c/domfarfora.ru/"
+temppath="/home/1c/tmp/df_temp.sql"
+
+# Proccess
+echo "sync files"
+rsync -e ssh --progress --partial --force --delete -avzpgo --exclude-from='sync-exclude.txt' $user@$host:$sitepath $sitepath
+echo "sync files done"
+
+echo "dump db"
+mysqldump -u$dbuser -p$dbpass -h$dbhost $dbname > $temppath
+
+echo "load db"
+mysql -u$dbuser -p$dbpass -h$dbhost $dbname < $temppath
+
+echo "clean"
+rm $temppath
+
