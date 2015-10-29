@@ -20,7 +20,7 @@ echo "dump db"
 mysqldump -u$dbuser -p$dbpass -h$dbhost $dbname > $temppath
 
 echo "load db"
-mysql -u$dbuser -p$dbpass -h$dbhost $dbname < $temppath
+mysql -u$dbuser -p$dbpass $dbname < $temppath
 
 echo "clean"
 rm $temppath
