@@ -12,7 +12,7 @@ site="domain.ru"
 pathFrom="relative/or/absolute_path"$site
 pathTo="/var/www/absolute_path/data/Dropbox/backups/"$site
 
-# Парсинг параметров
+# РџР°СЂСЃРёРЅРі РїР°СЂР°РјРµС‚СЂРѕРІ
 mode=console
 while getopts "m:" opt; do
     case "$opt" in
@@ -21,7 +21,7 @@ while getopts "m:" opt; do
     esac 
 done
 
-# Цветные в консоль, одноцветные в лог
+# Р¦РІРµС‚РЅС‹Рµ РІ РєРѕРЅСЃРѕР»СЊ, РѕРґРЅРѕС†РІРµС‚РЅС‹Рµ РІ Р»РѕРі
 if [[ $mode == console ]]; then
  #echo "console"
  OK="\e[32mOK\e[39m"
